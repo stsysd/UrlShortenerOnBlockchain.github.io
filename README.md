@@ -3,7 +3,9 @@
 
 ## Description
 EthereumのContractにURLを送ると、ハッシュ関数から[a-zA-Z0-9]からなる8文字のkeyを生成してmappingに登録する。短縮URLはルートに"#[key]"を加えたものになる。
+
 短縮URLにアクセスがあった場合は、Contractにkeyを送って元のURLを受け取り、javascriptでそのページにジャンプする。
+
 現在のところtestnet(ropsten)でのみ動作確認済み。
 
 # Requirement
