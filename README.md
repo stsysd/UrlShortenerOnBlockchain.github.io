@@ -31,11 +31,11 @@ npm install truffle-hdwallet-provider
 
 migrate contract
 ```
-truffle migrate --network 3
+truffle migrate --network 3 // read MetaMask nemonic from "../nmemonic.txt"
 ```
 
 extract contract's address and abi to json file
-truffle migrate --network 3 // read MetaMask nemonic from "../nmemonic.txt"
+```
 node make-contract-json.js
 ```
 
