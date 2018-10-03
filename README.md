@@ -1,6 +1,10 @@
 # URL Shortener on Blockchain
 その名の通り、ブロックチェーン上で動くURL短縮ツール
 
+# Demo
+- URL登録(要MetaMask)[https://urlshr.tk]
+- 短縮URL[https://urlshr.tk/#TCScAkgf]
+
 ## Description
 EthereumのContractにURLを送ると、ハッシュ関数から[a-zA-Z0-9]からなる8文字のkeyを生成してmappingに登録する。短縮URLはルートに"#[key]"を加えたものになる。
 
