@@ -1,6 +1,8 @@
+'use strict';
+
 let dapp = {
   async init(abi, address) {
-    if (!location.hash) {
+    if (!location.hash && window.web3) {
       this.web3 = new Web3(web3.currentProvider);
     } else {
       this.web3 = new Web3(new Web3.providers.HttpProvider(
