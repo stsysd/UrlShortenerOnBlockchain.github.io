@@ -1,0 +1,57 @@
+{
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "string"
+        }
+      ],
+      "name": "getText",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_text",
+          "type": "string"
+        }
+      ],
+      "name": "getKey",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_text",
+          "type": "string"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "address": "0x2a2ebb77a1f36413a4dab781fb3e483cecdc78c3"
+}
