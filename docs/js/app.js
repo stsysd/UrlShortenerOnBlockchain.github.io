@@ -116,7 +116,7 @@ let appForm = {
   <div>
     <h1> URL SHORTENER </h1>
     <p class="floor long-url">
-      http://<input v-model="text" type="url" class="text" placeholder="www.example.com" :disabled="!postable">
+      http://<input v-model="text" type="url" class="text" :placeholder="placeholder" :disabled="!postable">
     </p>
     <p class="floor">
     <button @click="post"
@@ -141,6 +141,7 @@ let appForm = {
     return {
       text: "",
       key: "",
+      placeholder: "URLはブロックチェーン上に公開されます",
       waiting: false
     };
   },
