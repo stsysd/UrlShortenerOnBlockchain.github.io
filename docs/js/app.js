@@ -150,7 +150,7 @@ let appForm = {
       return this.writable && !this.waiting;
     },
     shortUrl() {
-      return "https://" + location.host + location.pathname + "#" + this.key;
+      return location.protocol + "//" + location.host + location.pathname + "#" + this.key;
     }
   },
 
@@ -211,7 +211,7 @@ let app = new Vue({
       return "http://" + this.text;
     },
     root() {
-      return "https://" + location.host + location.pathname;
+      return location.protocol + "//" + location.host + location.pathname;
     }
   },
 
