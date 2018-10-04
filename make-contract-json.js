@@ -6,7 +6,7 @@ function makeContractJson() {
       abi: data.abi,
       address: data.networks["3"].address
     };
-    fs.writeFileSync("src/contract.json", JSON.stringify(config, null, 2));
+    fs.writeFileSync("docs/contract.json", JSON.stringify(config, null, 2));
   });
 }
 

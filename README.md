@@ -41,5 +41,5 @@ node make-contract-json.js
 
 and serve files
 ```
-live-server src // or some other server
+live-server docs // or some other server
 ```

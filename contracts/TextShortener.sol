@@ -1,6 +1,8 @@
 pragma solidity ^0.4.23;
 
 contract TextShortener {
+  event Registraction(string key, string text);
+
   struct Data {
     address sender;
     string text;
@@ -31,6 +33,7 @@ contract TextShortener {
     string memory key = findKey(_text);
     keyToData[key].sender = msg.sender;
     keyToData[key].text = _text;
+    emit Registraction(key, _text);
   }
 
   function findKey(string _text) internal view returns (string) {
