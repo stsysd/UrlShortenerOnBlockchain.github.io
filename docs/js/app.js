@@ -169,8 +169,10 @@ let appForm = {
           alert("transaction failed");
         } else {
           alert("transaction complete")
+          while (!this.key) {
+            this.key = await dapp.key(this.text);
+          }
         }
-        this.key = await dapp.key(this.text);
         this.waiting = false;
       } catch (e) {
         console.log(e);
