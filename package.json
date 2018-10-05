@@ -1,0 +1,31 @@
+{
+  "name": "urlshr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider": "^0.0.6"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "scripts": {
+    "migrate": "truffle migrate --network ropsten && cp build/contracts/TextShortener.json docs/artifact.json",
+    "serve": "live-server ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stsysd/urlshortener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stsysd/urlshortener/issues"
+  },
+  "homepage": "https://urlshr.tk"
+}

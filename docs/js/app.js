@@ -141,7 +141,7 @@ let appForm = {
     return {
       text: "",
       key: "",
-      placeholder: "URLはブロックチェーン上に公開されます",
+      placeholder: "URL will be revealed on Ethereum Blockchain.",
       waiting: false
     };
   },
@@ -219,8 +219,9 @@ let app = new Vue({
   },
 
   async created() {
-    let response = await axios.get("./contract.json");
-    await dapp.init(response.data.abi, response.data.address);
+    let response = await axios.get("./artifact.json");
+    let artifact = response.data;
+    await dapp.init(artifact.abi, artifact.networks["3"].address);
     this.writable = !!dapp.account;
     if (location.hash) {
       this.redirect = true;

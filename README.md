@@ -29,17 +29,12 @@ install truffle-hdwallet-provider
 npm install truffle-hdwallet-provider
 ```
 
-migrate contract
+migrate contract (to require MetaMask nmemonic of "../nmemonic.txt")
 ```
-truffle migrate --network 3 // read MetaMask nemonic from "../nmemonic.txt"
-```
-
-extract contract's address and abi to json file
-```
-node make-contract-json.js
+npm run migrate
 ```
 
-and serve files
+and serve files in local
 ```
-live-server docs // or some other server
+npm run serve // to serve "./docs" at http://127.0.0.1:8080
 ```
