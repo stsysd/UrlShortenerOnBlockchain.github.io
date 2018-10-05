@@ -109,6 +109,15 @@ let dapp = {
       setTimeout(fn, t);
     });
   },
+
+  network() {
+    return new Promise((resolve, reject) => {
+      this.web3.version.getNetwork((err, id) => {
+        if (err) reject(err);
+        else resolve(id);
+      });
+    });
+  }
 };
 
 let appForm = {
@@ -222,7 +231,8 @@ let app = new Vue({
     let response = await axios.get("./artifact.json");
     let artifact = response.data;
     await dapp.init(artifact.abi, artifact.networks["3"].address);
-    this.writable = !!dapp.account;
+    let netId = await dapp.network();
+    this.writable = !!dapp.account && netId == "3";
     if (location.hash) {
       this.redirect = true;
       let key = location.hash.substring(1);
@@ -233,7 +243,7 @@ let app = new Vue({
         setTimeout(() =>
         alert(
           "You need have the MetaMask browser extension installed"
-          + " and login to it to register url."),
+          + " and connect to ropsten to register url."),
           100);
       }
     }
